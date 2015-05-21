@@ -2,7 +2,7 @@
 module.exports = {
     deployment: {
         port: 6061,
-        repoUrl: "https://bitbucket.org/ejnijhof/criaprojectgroep7",
+        repoUrl: "https://github.com/EJWN/cria-seed",
         user: "theo.theunissen0@gmail.com",
         to: "criaprojectgroep7@gmail.com",
         userName: "CRIA-testert",
