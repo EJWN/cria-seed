@@ -1,5 +1,4 @@
-﻿(function () {
-    "use strict";
+﻿    "use strict";
 
     var mongoose = require('mongoose'),
         uitvaartSamenstellen = mongoose.model('uitvaartSamenstellen');
@@ -19,5 +18,3 @@
             return res.send(retObj);
         });
     };
-
-}());
