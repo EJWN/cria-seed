@@ -1,6 +1,5 @@
-﻿//hoi
-/*jslint node: true */
-"use strict";
+﻿/*jslint node: true */
+/*"use strict";
 
 var mongoose = require('mongoose'),
     uitvaartSamenstellen = mongoose.model('uitvaartSamenstellen');
@@ -19,4 +18,4 @@ exports.detail = function (req, res) {
         };
         return res.send(retObj);
     });
-};
+};*/

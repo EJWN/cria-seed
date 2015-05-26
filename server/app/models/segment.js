@@ -1,6 +1,7 @@
 ﻿/**
 * Module dependencies.
 */
+    /*
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     segment;
@@ -15,4 +16,4 @@ segment = new Schema({
         'segment'
 });
 
-mongoose.model('segment', segment);
+mongoose.model('segment', segment);*/

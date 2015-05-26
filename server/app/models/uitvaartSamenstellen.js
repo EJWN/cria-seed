@@ -1,6 +1,7 @@
 ﻿/**
 * Module dependencies.
 */
+    /*
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     segment = mongoose.model('segment'),
@@ -15,4 +16,4 @@ uitvaartSamenstellen = new Schema({
         'uitvaartSamenstellen'
 });
 
-mongoose.model('uitvaartSamenstellen', uitvaartSamenstellen);
+mongoose.model('uitvaartSamenstellen', uitvaartSamenstellen);*/
