@@ -1,6 +1,4 @@
-﻿/* poep */
-/*jslint node: true */
-"use strict";
+﻿
 
 var mongoose = require('mongoose'),
     uitvaartSamenstellen = mongoose.model('uitvaartSamenstellen');
