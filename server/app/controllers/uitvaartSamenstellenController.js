@@ -1,5 +1,4 @@
 ﻿
-
 var mongoose = require('mongoose'),
     uitvaartSamenstellen = mongoose.model('uitvaartSamenstellen');
 
