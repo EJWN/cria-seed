@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+cp ~/config.js ~/cria-seed/server/config
+
 export COMMIT_MESSAGE="Automatic Deployment: `date`"
 export STAGE0=development
 export STAGE1=test-static-analyzer-passed
