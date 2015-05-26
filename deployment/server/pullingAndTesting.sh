@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 export COMMIT_MESSAGE="Automatic Deployment: `date`"
 export STAGE0=development
 export STAGE1=test-static-analyzer-passed
@@ -90,6 +91,8 @@ git fetch --all
 git reset --hard
 git pull | tee -a "$DIR/$CUR_SCRIPT"
 
+cp ~/config.js ~/cria-seed/server/config
+
 echo | tee -a "$DIR/$CUR_SCRIPT"
 echo "`date` -------------------------------------------------------------------------------" | tee -a "$DIR/$CUR_SCRIPT"
 echo "`date` - STAGE1, static-analyzer" | tee -a "$DIR/$CUR_SCRIPT"
@@ -97,6 +100,8 @@ echo "`date` -------------------------------------------------------------------
 echo | tee -a "$DIR/$CUR_SCRIPT"
 
 git checkout $STAGE1 | tee -a "$DIR/$CUR_SCRIPT"
+
+cp ~/config.js ~/cria-seed/server/config
 
 cd $BASEDIR/tests/static-analyzer
 ./run_lint.sh > static-analyzer-results.log
@@ -120,6 +125,8 @@ git checkout $STAGE2 | tee -a "$DIR/$CUR_SCRIPT"
 git fetch --all
 git reset --hard
 git pull
+
+cp ~/config.js ~/cria-seed/server/config
 
 # Set environment for stage
 export NODE_ENV=test
@@ -190,6 +197,8 @@ git checkout $STAGE3 | tee -a "$DIR/$CUR_SCRIPT"
 git fetch --all
 git reset --hard
 git pull
+
+cp ~/config.js ~/cria-seed/server/config
 
 # Set environment for stage
 export NODE_ENV=acceptance
@@ -272,6 +281,8 @@ git fetch --all
 git reset --hard
 git pull
 
+cp ~/config.js ~/cria-seed/server/config
+
 git merge --no-edit $STAGE3 | tee -a "$DIR/$CUR_SCRIPT"
 git commit -am "Merging from $STAGE3 to $STAGE4: `date`" | tee -a "$DIR/$CUR_SCRIPT"
 git push origin $STAGE4 | tee -a "$DIR/$CUR_SCRIPT"
@@ -286,6 +297,8 @@ git checkout master | tee -a "$DIR/$CUR_SCRIPT"
 git fetch --all
 git reset --hard
 git pull
+
+cp ~/config.js ~/cria-seed/server/config
 
 git merge --no-edit $STAGE4 | tee -a "$DIR/$CUR_SCRIPT"
 git commit -am "Merging from $STAGE4 to master: `date`" | tee -a "$DIR/$CUR_SCRIPT"
